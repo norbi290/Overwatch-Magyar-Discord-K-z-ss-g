@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Overwatch Discord Közösség</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #000;
+      --text: #fff;
+      --highlight: #FFA500;
+      --card-bg: rgba(0, 0, 0, 0.85);
+    }
+
+    [data-theme="light"] {
+      --bg: #fff;
+      --text: #000;
+      --highlight: #FFA500;
+      --card-bg: rgba(255, 255, 255, 0.85);
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Orbitron', sans-serif;
+      background: url('https://wallpapercave.com/wp/wp1813460.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: var(--text);
+      text-align: center;
+      background-color: var(--bg);
+      transition: background 0.3s ease, color 0.3s ease;
+    }
+
+    .overlay {
+      background-color: rgba(0, 0, 0, 0.7);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      color: var(--highlight);
+      animation: fadeInDown 1.5s ease-out;
+    }
+
+    p {
+      font-size: 1.2rem;
+      max-width: 600px;
+      animation: fadeInUp 1.5s ease-out;
+    }
+
+    .discord-btn {
+      margin-top: 2rem;
+      padding: 1rem 2rem;
+      font-size: 1.2rem;
+      background-color: #5865F2;
+      border: none;
+      border-radius: 10px;
+      color: white;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+      animation: fadeIn 2s ease-out;
+    }
+
+    .discord-btn:hover {
+      background-color: #404EED;
+    }
+
+    .theme-toggle {
+      position: fixed;
+      top: 1rem;
+      right: 1rem;
+      background: var(--highlight);
+      color: var(--bg);
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 10px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .section {
+      background-color: var(--card-bg);
+      margin: 2rem auto;
+      padding: 2rem;
+      border-radius: 1rem;
+      max-width: 1000px;
+      box-shadow: 0 0 20px rgba(255, 165, 0, 0.5);
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 1rem;
+    }
+
+    .gallery img {
+      width: 100%;
+      border-radius: 10px;
+      transition: transform 0.3s ease;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    .rules, .events, .leaderboard {
+      text-align: left;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    iframe {
+      border: none;
+      width: 100%;
+      height: 500px;
+      border-radius: 1rem;
+    }
+
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-50px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(50px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <button class="theme-toggle" onclick="toggleTheme()">🌓 Téma váltás</button>
+
+  <div class="overlay">
+    <h1>Csatlakozz az Overwatch Közösséghez!</h1>
+    <p>Szeretnél aktív, magyar játékosokkal játszani? Versenyeznél vagy csak beszélgetnél kedvenc játékaidról? Itt a helyed!</p>
+    <a class="discord-btn" href="https://discord.gg/pCvHc94sD6" target="_blank">Csatlakozz Discordon</a>
+  </div>
+
+  <div class="section">
+    <h2>Overwatch Hősök</h2>
+    <div class="gallery">
+      <img src="https://overwatch.blizzard.com/static/images/heroes/hero1.png" alt="Hero 1">
+      <img src="https://overwatch.blizzard.com/static/images/heroes/hero2.png" alt="Hero 2">
+      <img src="https://overwatch.blizzard.com/static/images/heroes/hero3.png" alt="Hero 3">
+      <img src="https://overwatch.blizzard.com/static/images/heroes/hero4.png" alt="Hero 4">
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Eseménynaptár</h2>
+    <div class="events">
+      <ul>
+        <li>🎯 Június 15. - 1v1 Bajnokság</li>
+        <li>🤝 Június 22. - Közösségi játék est</li>
+        <li>🏆 Június 30. - Ranglista kihívás</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Szabályzat</h2>
+    <div class="rules">
+      <ol>
+        <li>Tiszteld a többi játékost.</li>
+        <li>Nincs toxic viselkedés vagy gyűlöletbeszéd.</li>
+        <li>Maradj aktív és támogasd a közösséget!</li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Taglista / Aktív játékosok</h2>
+    <div class="leaderboard">
+      <ul>
+        <li>🔥 PlayerOne - 120 pont</li>
+        <li>⚡ WidowMain - 95 pont</li>
+        <li>🛡️ TankPapa - 80 pont</li>
+        <li>💉 HealGoddess - 72 pont</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Élő Discord Chat</h2>
+    <iframe src="https://discord.com/widget?id=1222122630183637082&theme=dark" allowtransparency="true" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+  </div>
+
+  <script>
+    function toggleTheme() {
+      const html = document.documentElement;
+      const current = html.getAttribute("data-theme");
+      html.setAttribute("data-theme", current === "light" ? "dark" : "light");
+    }
+  </script>
+</body>
+</html>
